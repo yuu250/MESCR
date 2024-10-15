@@ -1,3 +1,3 @@
 # MESCR
 
-coming soon
+Training code of the MMSCNet
