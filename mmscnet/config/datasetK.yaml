@@ -1,0 +1,11 @@
+# directory: path/images/
+# percent of train val test
+img: D:\dl\guoke\data\all\
+train: D:\dl\guoke\data\6yue4\clean\train\train_K.csv
+val: D:\dl\guoke\data\6yue4\clean\train\val_K.csv
+test: D:\dl\guoke\data\6yue4\clean\train\test.csv
+
+# number of classes
+nc: 5
+# class names
+names: ['A', 'F','G', 'K','M']

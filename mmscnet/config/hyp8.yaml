@@ -1,0 +1,24 @@
+# Train settings Hyperparameters ---------------------------------------------------------------------------------------
+epochs: 200  # number of epochs to train for
+batch_size: 1024 # number of images per batch (-1 for AutoBatch)
+size: [8, 8]  # size of input images as integer or w,h
+workers: 32 # number of worker threads for data loading (per RANK if DDP)
+optimizer: SGD # optimizer to use, choices=['SGD', 'Adam', 'AdamW', 'RMSProp']
+lr_schedule: coslr   # lr schedule to use, choices=['coslr','stepLR','None']
+step: 20 # step for stepLR
+gamma: 0.1 # gamma for stepLR
+lr0: 0.001  # initial learning rate (i.e. SGD=1E-2, Adam=1E-3)
+lrf: 0.00001  # final learning rate (lr0 * lrf)
+momentum: 0.937  # SGD momentum/Adam beta1
+warmup_epochs: 3.0  # warmup epochs (fractions ok)
+seed: 3407 #set random seed
+model: RRSCNet # which model to train, choices=['Res_SCNet','Astroformer','SCNet','RRSCNet'，‘RRRSCNet','RRSCNetgri']
+# Augmentation ---------------------------------------------------------------------------------------------------------
+augment: True
+rot90: 0.5  # image rotation (+/- deg)
+flipud: 0.5  # image flip up-down (probability)
+fliplr: 0.5  # image flip left-right (probability)
+noise: 0.5 # image add noise
+cutout: 0.5
+erase: 0.5
+brightness: 0.0  # image brightness adjustment (probability)
